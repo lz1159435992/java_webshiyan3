@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>java_webshiyan3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>decodeFilter</filter-name>
+    <filter-class>filter.DecodeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>decodeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>userFilter</filter-name>
+    <filter-class>filter.UserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>userFilter</filter-name>
+    <url-pattern>/dati.jsp</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>adminFilter</filter-name>
+    <filter-class>filter.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>adminFilter</filter-name>
+    <url-pattern>/change.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>adminFilter</filter-name>
+    <url-pattern>/changequestion.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>adminFilter</filter-name>
+    <url-pattern>/tianjia.jsp</url-pattern>
+  </filter-mapping>
+</web-app>
