@@ -43,7 +43,7 @@ public class XiugaiServlet extends HttpServlet {
 		Question ques = qes.get(id);
 		questionService.removeQuestion(ques);
 
-		//if(!request.getParameter("shanchu"+nid).equals("删除")){
+		//if(!request.getParameter("shanchu"+nid).equals("删除")){ansjdajsdakjd
 		ques.setQuestion(request.getParameter("q"+nid));
 		ques.setChoice_a(request.getParameter("o1"+nid));
 		ques.setChoice_b(request.getParameter("o2"+nid));
